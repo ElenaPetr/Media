@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import {Animal } from './animal';
 
-export class Animal {
-  id: number;
-  name: string;
-  desc:string;
-}
 
 const ANIMALS: Animal[] = [
   { id: 11, name: 'Волк' , desc:'серый'},
@@ -23,24 +19,16 @@ const ANIMALS: Animal[] = [
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-    <h2>Звери живущие в лесу</h2>
-	<h3>Чтобы узнать описание, выберите зверя</h3>
+	<h2>Чтобы узнать описание, выберите зверя</h2>
     <ul class="animals">
       <li *ngFor="let animal of animals"
-        [class.selected]="animal === selectedAnimals"
+        [class.selected]="animal === selectedAnimal"
         (click)="onSelect(animal)">
         <span class="badge">{{animal.id}}</span> {{animal.name}} 
       </li>
     </ul>
-    <div *ngIf="selectedAnimal">
-      <h2>Вы выбрали пункт {{selectedAnimal.id}} : {{selectedAnimal.name}}!</h2>
-      <div><label>id: </label>{{selectedAnimal.id}}</div>
-	   <div><label>описание: {{selectedAnimal.name}} </label>{{selectedAnimal.desc}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedAnimal.name" placeholder="name"/>
-      </div>
-    </div>
+	<animal-detail [animal]="selectedAnimal"></animal-detail>
+   
   `,
   styles: [`
     .selected {
