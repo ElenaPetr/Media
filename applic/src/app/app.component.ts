@@ -68,7 +68,7 @@ const ANIMALS: Animal[] = [
       color: white;
     }
     .animals li:hover {
-      color: #607D8B;
+      color: red;
       background-color: #DDD;
       left: .1em;
     }
