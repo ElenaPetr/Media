@@ -1,47 +1,34 @@
-import { Component} from '@angular/core';
-import {Animal } from './animal';
+import { Component, OnInit} from '@angular/core';
+import {List } from './animal';
+import { AnimalService } from './animal.service';
 
-
-const ANIMALS: Animal[] = [
-  { id: 11, name: 'Волк' , desc:'серый'},
-  { id: 12, name: 'Лиса', desc:'рыжая'},
-  { id: 13, name: 'Лось' , desc:'рогатый'},
-  { id: 14, name: 'Заяц', desc:'косой' },
-  { id: 15, name: 'Барсук', desc: 'веселый'},
-  { id: 16, name: 'Олень', desc:'красивый' },
-  { id: 17, name: 'Ёж', desc:'колючий' },
-  { id: 18, name: 'Тигр', desc:'полосатый' },
-  { id: 19, name: 'Белка' , desc:'пушистая'},
-  { id: 20, name: 'Мышка' , desc:'маленькая'}
-];
-
+ 
 @Component({
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
 	<h2>Чтобы узнать описание, выберите зверя</h2>
-    <ul class="animals">
-      <li *ngFor="let animal of animals"
-        [class.selected]="animal === selectedAnimal"
-        (click)="onSelect(animal)">
-        <span class="badge">{{animal.id}}</span> {{animal.name}} 
+    <ul class="an">
+      <li *ngFor="let item of animals"
+        [class.selected]="item === selectedItem"
+        (click)="onSelect(item)">
+        <span class="badge">{{item.id}}</span> {{item.name}} 
       </li>
     </ul>
-	<animal-detail [animal]="selectedAnimal"></animal-detail>
-   
-  `,
-  styles: [`
+	<detail [oneName]="selectedItem"></detail>
+    `,
+	styles: [`
     .selected {
       background-color: #CFD8DC !important;
       color: white;
     }
-    .animals {
+    .an {
       margin: 0 0 2em 0;
       list-style-type: none;
       padding: 0;
       width: 15em;
     }
-    .animals li {
+    .an li {
       cursor: pointer;
       position: relative;
       left: 0;
@@ -51,20 +38,20 @@ const ANIMALS: Animal[] = [
       height: 1.6em;
       border-radius: 4px;
     }
-    .animals li.selected:hover {
+    .an li.selected:hover {
       background-color: #BBD8DC !important;
       color: white;
     }
-    .animals li:hover {
-      color: red;
+    .an li:hover {
+      color: #607D8B;
       background-color: #DDD;
       left: .1em;
     }
-    .animals .text {
+    .an .text {
       position: relative;
       top: -3px;
     }
-    .animals .badge {
+    .an .badge {
       display: inline-block;
       font-size: small;
       color: white;
@@ -78,15 +65,27 @@ const ANIMALS: Animal[] = [
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `]
+  `],
+  providers: [AnimalService]
 })
-export class AppComponent {
-  title = 'Звери';
-  animals = ANIMALS;
-  selectedAnimal: Animal;
 
-  onSelect(animal: Animal): void {
-    this.selectedAnimal = animal;
+export class AppComponent implements OnInit {
+  title = 'Звери';
+  animals:List[];
+  selectedItem: List;
+  
+  constructor(private animalService: AnimalService) { }
+  
+ getAnimals(): void {
+  this.animalService.getAnimals().then(animals => this.animals = animals);
+}
+ngOnInit(): void {
+  this.getAnimals();
+}
+  onSelect(animal: List): void {
+    this.selectedItem = animal;
+	
+	
   }
 }
 
