@@ -43,7 +43,11 @@ import { AnimalService } from './animal.service';
       background-color: #BBD8DC !important;
       color: white;
     }
+<<<<<<< HEAD
     .an li:hover {
+=======
+    .animals li:hover {
+>>>>>>> parent of 79f53f5... color changed
       color: #607D8B;
       background-color: #DDD;
       left: .1em;
