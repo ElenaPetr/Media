@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit} from '@angular/core';
 import {List } from './animal';
 import { AnimalService } from './animal.service';
@@ -87,5 +88,15 @@ ngOnInit(): void {
 	
 	
   }
-}
+=======
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app';
+>>>>>>> parent of dc539db... first commit. lesson 3
+}
