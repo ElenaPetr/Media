@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+  <ul class="media">
+	<li *ngFor="let photo of media" [class.selected]="photo===selectedPhoto" (click)="onSelect(photo)">
+	
+		<span class="description" >{{photo.description}}</span>
+		
+		</li>
+		
+</ul>
+
+<div class="image">
+<div *ngIf="selectedPhoto">
+<h2>id:{{selectedPhoto.id}} {{selectedPhoto.description}}</h2>
+<div class="photo"><img src="{{selectedPhoto.url}}"/></div>
+<input [(ngModel)]="selectedPhoto.description" placeholder="description"/>
+
+</div>
+</div>
