@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
+import {Media} from './media';
 
-export class Media{
-id:number;
-url:string;
-description:string;
-}
+
 
 const MEDIA:Media[]=[
 			{id:0, url: 'https://unsplash.it/300/400/?image=1084', description: 'seals' },
