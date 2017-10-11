@@ -1,7 +1,8 @@
 h1{
-margin:0 50%;
+margin:30px auto;
 color: #f8ab8d ;
 text-shadow:1px 2px 1px #506a6b;
+text-align:center;
 }
 
 
@@ -11,40 +12,40 @@ font-family:Arial;
 }
 
 .list {
-height:600px;
-width:200px;
-overflow:auto;
-float:left;
-margin:0;
-padding:0;
+margin:0 auto;
+
+/*width:1000px;*/
+
+
 }
 .media .selected {
-background:linear-gradient( #9097A2, #f8ab8d,  #9097A2);
-color:white;
+/*background:linear-gradient( #9097A2, #f8ab8d,  #9097A2);
+color:white;*/
 text-shadow:1px 1px 2px grey;
 }
 
 .media {
-margin: 0 20px;
+/*margin: 0 20px;*/
 list-style-type: none;
 padding:0;
-position:relative;
-width:160px;
+/*position:relative;
+width:160px;*/
 
 
 
 
 }
  .media li {
-width:160px;
+ display:inline-block;
+/*width:180px;
 font-weight:bold;
 font-size:20px;
 line-height:20px;
-background:linear-gradient( #f8ab8d, white, #f8ab8d);
-margin-bottom:10px;
+/*background:linear-gradient( #f8ab8d, white, #f8ab8d);
+margin:10px;
 padding: 15px 30px  ;
 color:#506a6b;
-border-radius:25px;
+border-radius:25px;*/
 box-shadow: 0 4px 4px 0 rgba(0,0,0, .2);
 }
 .media li:hover {
