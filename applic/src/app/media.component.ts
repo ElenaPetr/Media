@@ -1,25 +1,11 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 import {Media} from './media';
+import { MediaService }         from './media.service';
 
 
 
-const MEDIA:Media[]=[
-			{id:0, url: 'https://unsplash.it/300/400/?image=1084', description: 'seals' },
-			{id:1, url: 'https://unsplash.it/300/400/?image=1080', description: 'strawberry' },
-			{id:2, url: 'https://unsplash.it/300/400/?image=1072', description: 'car' },
-			{id:3, url: 'https://unsplash.it/300/400/?image=1069', description: 'jellyfish' },
-			{id:4, url: 'https://unsplash.it/300/400/?image=1067', description: 'city' },
-			{id:5, url: 'https://unsplash.it/300/400/?image=1066', description: 'baby' },
-			{id:6, url: 'https://unsplash.it/300/400/?image=1061', description: 'coast' },
-			{id:7, url: 'https://unsplash.it/300/400/?image=1052', description: 'rock' },
-			{id:8, url: 'https://unsplash.it/300/400/?image=1040', description: 'castle' },
-			{id:9, url: 'https://unsplash.it/300/400/?image=1039', description: 'waterfall' },
-			{id:10, url: 'https://unsplash.it/300/400/?image=977', description: 'amanita' },
-			{id:11, url: 'https://unsplash.it/300/400/?image=971', description: 'winter' },
-			{id:12, url: 'https://unsplash.it/300/400/?image=943', description: 'deer' },
-			{id:13, url: 'https://unsplash.it/300/400/?image=905', description: 'mountains' },
-			{id:14, url: 'https://unsplash.it/300/400/?image=901', description: 'north-light' },
-		];
+
 @Component({
   selector: 'my-media',
   templateUrl: './media.component.html',
@@ -27,11 +13,22 @@ const MEDIA:Media[]=[
   
 
 })
-	export class MediaComponent {
+	export class MediaComponent implements OnInit{
 		title='Media';
-		media=MEDIA;
+		media:Media[];
 		selectedPhoto:Media;
- 
+		
+		constructor(private router:Router,
+		private mediaService: MediaService) { }
+		
+		
+ getMedia(): void {
+    this.mediaService.getMedias().then(jkkk=> this.media = jkkk);
+  }
+
+  ngOnInit(): void {
+    this.getMedia();
+  }
 		onSelect(photo:Media) : void {
 			this.selectedPhoto=photo;
 		}

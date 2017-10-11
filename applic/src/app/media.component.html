@@ -1,6 +1,8 @@
 <h1>{{title}}</h1>
-  <div class="list"><ul class="media">
+  <div class="list">
+  <ul class="media">
 	<li *ngFor="let photo of media" [class.selected]="photo===selectedPhoto" (click)="onSelect(photo)">
+	
 	
 		<span class="description" >{{photo.description}}</span>
 		
