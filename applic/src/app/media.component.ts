@@ -14,8 +14,7 @@ import { MediaService }         from './media.service';
 
 })
 	export class MediaComponent implements OnInit{
-		title='Media';
-		media:Media[];
+		medi:Media[];
 		selectedPhoto:Media;
 		
 		constructor(private router:Router,
@@ -23,8 +22,10 @@ import { MediaService }         from './media.service';
 		
 		
  getMedia(): void {
-    this.mediaService.getMedias().then(jkkk=> this.media = jkkk);
+    this.mediaService.getMedias().then(jkkk=> this.medi = jkkk);
   }
+  
+  
 
   ngOnInit(): void {
     this.getMedia();
@@ -32,5 +33,15 @@ import { MediaService }         from './media.service';
 		onSelect(photo:Media) : void {
 			this.selectedPhoto=photo;
 		}
+		
+		
+		delete(media: Media): void {
+  this.mediaService
+      .delete(media.id)
+      .then(() => {
+        this.medi = this.medi.filter(h => h !== media);
+        if (this.selectedPhoto === media) { this.selectedPhoto = null; }
+      });
+}
 	}
 

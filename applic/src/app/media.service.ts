@@ -18,8 +18,17 @@ private headers = new Headers({'Content-Type': 'application/json'});
              .toPromise()
              .then(response => response.json() as Media[])
              .catch(this.handleError)
+			 }
    
-  }
+  
+  
+  delete(id: number): Promise<void> {
+  const url = `${this.mediaUrl}/${id}`;
+  return this.http.delete(url, {headers: this.headers})
+    .toPromise()
+    .then(() => null)
+    .catch(this.handleError);
+}
   
   private handleError(error: any): Promise<any> {
   console.error('An error occurred', error); // for demo purposes only

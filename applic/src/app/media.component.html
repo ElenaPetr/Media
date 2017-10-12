@@ -1,14 +1,18 @@
-<h1>{{title}}</h1>
+
   <div class="list">
   <ul class="media">
-	<li *ngFor="let photo of media" [class.selected]="photo===selectedPhoto" (click)="onSelect(photo)">
+	<li *ngFor="let photo of medi" >
 	
 		<div class="img"><img src="{{photo.url}}"/></div>
-		<!--<span class="description" >{{photo.description}}</span>-->
-		
+		<div class="btn">
+		<div class="desc" >{{photo.description| uppercase}}</div>
+			<i class="fa fa-edit fa-2x"></i>
+			<i class="fa fa-trash-o fa-2x"  (click) ="delete(photo); $event.stopPropagation()"></i>
+		</div>
 		</li>
 		
 </ul>
+<button class="add"><span>add new media</span></button>
 </div>
 
 <!--<div class="image">
