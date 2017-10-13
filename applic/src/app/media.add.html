@@ -1,0 +1,17 @@
+<div class="criate">
+<h2>criate media</h2>
+<label> Url:</label> 
+<input type="text" placeholder="url"/>
+<label> description:</label> 
+<input type="text" placeholder="description"/>
+<button (click)="add(media.value); media.value=''">
+    Add
+  </button>
+
+</div>
+<div>
+  <label>Hero name:</label> <input #heroName />
+  <button (click)="add(heroName.value); heroName.value=''">
+    Add
+  </button>
+</div>

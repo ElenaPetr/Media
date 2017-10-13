@@ -69,6 +69,9 @@ background-color:whitesmoke;
 padding:15px 10px 0 20px;
 
 }
+a {
+text-decoration:none;
+}
 
 .fa{
 font-family: FontAwesome;
@@ -77,7 +80,7 @@ opacity:1;
 padding:14px 20px 0 20px;
 }
 
-.fa:last-child{
+.fa-trash-o{
 margin-left:158px;
 }
 

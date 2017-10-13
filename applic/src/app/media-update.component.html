@@ -1,0 +1,15 @@
+
+<div  *ngIf="photo" class="update">
+<h2>update media</h2>
+
+<div><label> Url:</label> </div>
+<div><input [(ngModel)]="photo.url" placeholder="url"/></div>
+<div><label for id="description-field"> Description:</label></div> 
+<div><input id="description-field"/></div>
+
+
+<button (click)="goBack()">back</button>
+<button>update</button>
+
+</div>
+

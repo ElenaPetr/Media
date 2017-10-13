@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
+
+
 import {Media} from './media';
 
 
@@ -19,7 +21,16 @@ private headers = new Headers({'Content-Type': 'application/json'});
              .then(response => response.json() as Media[])
              .catch(this.handleError)
 			 }
-   
+			 
+	getMedia(id: number): Promise<Media> {
+    const url = `${this.mediaUrl}/${id}`;
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json() as Media)
+      .catch(this.handleError);
+  }
+  
+  
   
   
   delete(id: number): Promise<void> {

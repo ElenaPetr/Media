@@ -1,25 +1,19 @@
 
   <div class="list">
   <ul class="media">
-	<li *ngFor="let photo of medi" >
+	<li *ngFor="let photo of medi" [class.selected]="photo === selectedPhoto">
 	
 		<div class="img"><img src="{{photo.url}}"/></div>
-		<div class="btn">
-		<div class="desc" >{{photo.description| uppercase}}</div>
-			<i class="fa fa-edit fa-2x"></i>
-			<i class="fa fa-trash-o fa-2x"  (click) ="delete(photo); $event.stopPropagation()"></i>
-		</div>
-		</li>
+			<div class="btn">
+				<div class="desc">{{photo.description| uppercase}}</div>
+		 
+					<i class="fa fa-edit fa-2x" (click)="onSelect(photo)"></i>
+					<i class="fa fa-trash-o fa-2x" (click) ="delete(photo); $event.stopPropagation()"></i>
+			</div>
+	</li>
 		
 </ul>
+
 <button class="add"><span>add new media</span></button>
 </div>
 
-<!--<div class="image">
-<div *ngIf="selectedPhoto">
-<h2>id:{{selectedPhoto.id}} {{selectedPhoto.description}}</h2>
-<div class="photo"><img src="{{selectedPhoto.url}}"/></div>
-<input [(ngModel)]="selectedPhoto.description" placeholder="description"/>
-
-</div>
-</div>-->

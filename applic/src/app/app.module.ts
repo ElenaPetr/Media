@@ -6,13 +6,15 @@ import { AppRoutingModule }     from './app-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
-
-
+import { AppComponent } from './app.component';
 import { MediaComponent } from './media.component';
+import { MediaUpdateComponent }  from './media-update.component';
 import { MediaService }          from './media.service';
 @NgModule({
   declarations: [
-    MediaComponent
+  AppComponent,
+    MediaComponent,
+	MediaUpdateComponent 
 	
   ],
   imports: [
@@ -21,8 +23,10 @@ import { MediaService }          from './media.service';
 	 HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
+	 
   ],
   providers: [MediaService],
-  bootstrap: [MediaComponent]
+  bootstrap: [AppComponent]
+ 
 })
 export class AppModule { }

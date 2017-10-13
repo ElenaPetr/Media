@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { MediaComponent }      from './media.component';
-
+import { MediaUpdateComponent }  from './media-update.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/media', pathMatch: 'full' },
+ { path: 'media',     component: MediaComponent },
+ { path: 'update/:id', component: MediaUpdateComponent },
  
-  { path: 'media',     component: MediaComponent }
+
 ];
 
 @NgModule({
