@@ -27,6 +27,12 @@ export class MediaUpdateComponent implements OnInit {
       .subscribe(jkkk => this.photo = jkkk);
   }
   
+   save(): void {
+    this.mediaService.update(this.photo)
+      .then(() => this.goBack());
+  }
+
+  
   goBack(): void {
     this.location.back();
   }

@@ -5,11 +5,11 @@
 <div><label> Url:</label> </div>
 <div><input [(ngModel)]="photo.url" placeholder="url"/></div>
 <div><label for id="description-field"> Description:</label></div> 
-<div><input id="description-field"/></div>
+<div><input  [(ngModel)]="photo.description" id="description-field"/></div>
 
 
 <button (click)="goBack()">back</button>
-<button>update</button>
+<button (click)="save()">update</button>
 
 </div>
 

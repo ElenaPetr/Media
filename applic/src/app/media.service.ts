@@ -30,6 +30,15 @@ private headers = new Headers({'Content-Type': 'application/json'});
       .catch(this.handleError);
   }
   
+  update(media:Media): Promise<Media> {
+  const url = `${this.mediaUrl}/${media.id}`;
+ return this.http
+    .put(url, JSON.stringify(media), {headers: this.headers})
+    .toPromise()
+   .then(() => media)
+    .catch(this.handleError);
+}
+   
   
   
   
