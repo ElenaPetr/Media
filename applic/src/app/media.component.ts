@@ -28,6 +28,16 @@ import { MediaService }         from './media.service';
     this.mediaService.getMedias().then(jkkk=> this.medi = jkkk);
   }
   
+  add(url: string): void {
+    url = url.trim();
+	
+    if (!url) { return; }
+    this.mediaService.create(url)
+      .then(media => {
+        this.medi.push(media);
+        this.selectedPhoto = null;
+      });
+  }
 		delete(media: Media): void {
   this.mediaService
       .delete(media.id)
@@ -48,6 +58,7 @@ import { MediaService }         from './media.service';
 	gotoDetail(): void {
     this.router.navigate(['/update', this.selectedPhoto.id]);
   }
+  
 
 }
 

@@ -39,6 +39,13 @@ private headers = new Headers({'Content-Type': 'application/json'});
     .catch(this.handleError);
 }
    
+   create(url: string): Promise<Media> {
+    return this.http
+      .post(this.mediaUrl, JSON.stringify({url: url}), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json() as Media)
+      .catch(this.handleError);
+  }
   
   
   

@@ -14,6 +14,18 @@
 		
 </ul>
 
-<button class="add"><span>add new media</span></button>
-</div>
 
+  <div class="create">
+<h2>criate media</h2>
+<div><label> Url:</label> </div>
+<div><input  #mediaUrl /></div>
+<div><label> Description:</label></div> 
+<div><input  #mediaDescription /></div>
+
+
+
+ <button (click)="add(mediaUrl.value); mediaUrl.value=''">add new media</button>
+ 
+ </div>
+<!--<button class="add"><span>add new media</span></button>-->
+ </div>
