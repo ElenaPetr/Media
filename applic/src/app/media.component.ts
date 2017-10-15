@@ -28,11 +28,12 @@ import { MediaService }         from './media.service';
     this.mediaService.getMedias().then(jkkk=> this.medi = jkkk);
   }
   
-  add(url: string): void {
+  add(url:string,description:string): void {
     url = url.trim();
+	description=description.trim();
 	
-    if (!url) { return; }
-    this.mediaService.create(url)
+    if (!url && !description) { return; }
+    this.mediaService.create(url,description)
       .then(media => {
         this.medi.push(media);
         this.selectedPhoto = null;
