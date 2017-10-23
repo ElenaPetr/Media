@@ -22,8 +22,8 @@ export class MediaUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap
-      .switchMap((params: ParamMap) => this.mediaService.getMedia(+params.get('id')))
+   this.route.paramMap
+      .switchMap((params: ParamMap) => this.mediaService.getMedia(params.get('id')))
       .subscribe(jkkk => this.photo = jkkk);
   }
   

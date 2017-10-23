@@ -1,44 +1,32 @@
-import { Component,OnInit} from '@angular/core';
-import { Router }            from '@angular/router';
+import { Component,OnInit} 	from '@angular/core';
+import { Router }            		from '@angular/router';
+import { UUID } from 'angular2-uuid';
 
-import {Media} from './media';
+import {Media} 						from './media';
 import { MediaService }         from './media.service';
-
-
-
-
-
+ 
 @Component({
   selector: 'my-media',
   templateUrl: './media.component.html',
-  styleUrls: [ './media.component.css' ]
+ // styleUrls: [ './media.component.css' ]
+   
 })
 	export class MediaComponent implements OnInit{
 		medi:Media[];
 		selectedPhoto:Media;
+	   
 		
 		
 		constructor(private router:Router,
-		private mediaService: MediaService) { }
-		
-		
-		
-		
+						private mediaService: MediaService
+						) { }
+	
  getMedia(): void {
     this.mediaService.getMedias().then(jkkk=> this.medi = jkkk);
   }
   
-  add(url:string,description:string): void {
-    url = url.trim();
-	description=description.trim();
-	
-    if (!url && !description) { return; }
-    this.mediaService.create(url,description)
-      .then(media => {
-        this.medi.push(media);
-        this.selectedPhoto = null;
-      });
-  }
+   
+ 
 		delete(media: Media): void {
   this.mediaService
       .delete(media.id)
@@ -60,6 +48,19 @@ import { MediaService }         from './media.service';
     this.router.navigate(['/update', this.selectedPhoto.id]);
   }
   
+   
+  
+  }
+  
+ 
+  
+		
+		
+		 
 
-}
+ 
+  
+
+  
+
 

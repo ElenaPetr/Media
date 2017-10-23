@@ -1,5 +1,5 @@
 export class Media{
-id:number;
+id:string;
 url:string;
 description:string;
 }

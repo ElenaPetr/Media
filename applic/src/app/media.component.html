@@ -1,31 +1,17 @@
 
-  <div class="list">
-  <ul class="media">
-	<li *ngFor="let photo of medi" [class.selected]="photo === selectedPhoto">
-	
-		<div class="img"><img src="{{photo.url}}"/></div>
-			<div class="btn">
-				<div class="desc">{{photo.id}} {{photo.description| uppercase}}</div>
-		 
-					<i class="fa fa-edit fa-2x" (click)="onSelect(photo)"></i>
-					<i class="fa fa-trash-o fa-2x" (click) ="delete(photo); $event.stopPropagation()"></i>
-			</div>
-	</li>
-		
-</ul>
-
-
-  <div class="create">
-<h2>create media</h2>
-<div><label> Url:</label> </div>
-<div><input  #mediaUrl /></div>
-<div><label> Description:</label></div> 
-<div><input  #mediaDescription /></div>
-
-
-
- <button (click)="add(mediaUrl.value,mediaDescription.value); mediaUrl.value=''; mediaDescription.value=''">add new media</button>
+    <div class="container">
+	<div class="row" >
+	 <div class="col-sm-6 col-md-4" *ngFor="let photo of medi" [class.selected]="photo === selectedPhoto">
+		<div class ="thumbnail">
+		<img src="{{photo.url}}" alt="..."/>
+      <div class="caption">
+        <h6>{{photo.description| uppercase}}</h6>
+        <p><i class="fa fa-edit fa-2x" (click)="onSelect(photo)"></i>
+			 <i class="fa fa-trash-o fa-2x" (click) ="delete(photo); $event.stopPropagation()"></i></p>
+        </div>
+		</div>
+	</div>
  
- </div>
-<!--<button class="add"><span>add new media</span></button>-->
- </div>
+     <ngbd-modal-component></ngbd-modal-component>
+
+</div>

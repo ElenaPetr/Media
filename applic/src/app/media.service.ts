@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
+
+
 import 'rxjs/add/operator/toPromise';
 
 
@@ -22,7 +24,7 @@ private headers = new Headers({'Content-Type': 'application/json'});
              .catch(this.handleError)
 			 }
 			 
-	getMedia(id: number): Promise<Media> {
+	getMedia(id: string): Promise<Media> {
     const url = `${this.mediaUrl}/${id}`;
     return this.http.get(url)
       .toPromise()
@@ -33,15 +35,15 @@ private headers = new Headers({'Content-Type': 'application/json'});
   update(media:Media): Promise<Media> {
   const url = `${this.mediaUrl}/${media.id}`;
  return this.http
-    .put(url, JSON.stringify(media), {headers: this.headers})
+   .put(url, JSON.stringify(media), {headers: this.headers})
     .toPromise()
    .then(() => media)
     .catch(this.handleError);
 }
-   
-   create(url,description): Promise<Media> {
+  
+   create(id,url,description): Promise<Media> {
     return this.http
-      .post(this.mediaUrl, JSON.stringify({url:url,description:description}), {headers: this.headers})
+      .post(this.mediaUrl, JSON.stringify({id:id,url:url,description:description}), {headers: this.headers})
       .toPromise()
       .then(res => res.json() as Media)
       .catch(this.handleError);
@@ -49,7 +51,7 @@ private headers = new Headers({'Content-Type': 'application/json'});
   
   
   
-  delete(id: number): Promise<void> {
+  delete(id: string): Promise<void> {
   const url = `${this.mediaUrl}/${id}`;
   return this.http.delete(url, {headers: this.headers})
     .toPromise()
@@ -62,8 +64,8 @@ private headers = new Headers({'Content-Type': 'application/json'});
   return Promise.reject(error.message || error);
 }
   
-
+}
   
-  }
+  
   
 
