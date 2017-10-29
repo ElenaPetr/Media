@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_dBCtMbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_dBCtMrcMEeeMHfb4IxM0CQ" bindingContexts="_dBCtOLcMEeeMHfb4IxM0CQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.palantir.typescript.text.typeScriptEditor&quot; name=&quot;app.component.ts&quot; tooltip=&quot;C:\Angular\angular-cli-master\applic\src\app\app.component.ts&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Angular/angular-cli-master/applic/src/app/app.component.ts&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.palantir.typescript.text.typeScriptEditor&quot; name=&quot;app.component.spec.ts&quot; tooltip=&quot;C:\Angular\angular-cli-master\applic\src\app\app.component.spec.ts&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Angular/angular-cli-master/applic/src/app/app.component.spec.ts&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;com.genuitec.eclipse.webclipse.dashboard.elementFactory&quot; id=&quot;com.genuitec.eclipse.webclipse.dashboard.editor&quot; name=&quot;Dashboard&quot; tooltip=&quot;Dashboard&quot;>&#xD;&#xA;&lt;persistable openDashboard=&quot;true&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;com.genuitec.eclipse.webclipse.dashboard.elementFactory&quot; id=&quot;com.genuitec.eclipse.webclipse.dashboard.editor&quot; name=&quot;Dashboard&quot; tooltip=&quot;Dashboard&quot;>&#xD;&#xA;&lt;persistable openDashboard=&quot;true&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.palantir.typescript.text.typeScriptEditor&quot; name=&quot;app.component.ts&quot; tooltip=&quot;C:\Angular\angular-cli-master\applic\src\app\app.component.ts&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Angular/angular-cli-master/applic/src/app/app.component.ts&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;com.palantir.typescript.text.typeScriptEditor&quot; name=&quot;app.component.spec.ts&quot; tooltip=&quot;C:\Angular\angular-cli-master\applic\src\app\app.component.spec.ts&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/C:/Angular/angular-cli-master/applic/src/app/app.component.spec.ts&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_dBCtMrcMEeeMHfb4IxM0CQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_nGqSU7cMEeeMHfb4IxM0CQ" x="125" y="0" width="1024" height="768">
@@ -66,7 +66,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_nmyj6LcMEeeMHfb4IxM0CQ" elementId="org.eclipse.egit.ui.RepositoriesView" ref="_nmpZ8rcMEeeMHfb4IxM0CQ"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_nmyj6bcMEeeMHfb4IxM0CQ" containerData="7500" selectedElement="_nmyj8rcMEeeMHfb4IxM0CQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_nmyj6bcMEeeMHfb4IxM0CQ" containerData="7500" selectedElement="_nmyj6rcMEeeMHfb4IxM0CQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_nmyj6rcMEeeMHfb4IxM0CQ" containerData="7000" selectedElement="_nmyj67cMEeeMHfb4IxM0CQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_nmyj67cMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_nlwCELcMEeeMHfb4IxM0CQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_nmyj7LcMEeeMHfb4IxM0CQ" elementId="topRight" toBeRendered="false" containerData="3000">
@@ -78,7 +78,7 @@
                 </children>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_nmyj8rcMEeeMHfb4IxM0CQ" elementId="bottom" containerData="3000" selectedElement="_nmyj87cMEeeMHfb4IxM0CQ">
-                <tags>active</tags>
+                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_nmyj87cMEeeMHfb4IxM0CQ" elementId="com.genuitec.eclipse.webclipse.terminal.ui.TerminalPlusView" ref="_nmpZ87cMEeeMHfb4IxM0CQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_nmyj9LcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_nmpZ9LcMEeeMHfb4IxM0CQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_nmyj9bcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.views.AllMarkersView" ref="_nmpZ9bcMEeeMHfb4IxM0CQ"/>
@@ -128,9 +128,18 @@
       <toolbar xmi:id="_fR-jIbcOEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.cheatsheets.views.CheatSheetView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_nlwCELcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.editorss" selectedElement="_nlwCEbcMEeeMHfb4IxM0CQ">
-      <children xsi:type="basic:PartStack" xmi:id="_nlwCEbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.e4.primaryDataStack">
+      <children xsi:type="basic:PartStack" xmi:id="_nlwCEbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_am218LgNEeeXL4pZJmsX_A">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <tags>active</tags>
+        <children xsi:type="basic:Part" xmi:id="_am218LgNEeeXL4pZJmsX_A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Webclipse Dashboard" iconURI="platform:/plugin/com.genuitec.eclipse.webclipse.dashboard/icons/obj16/dashboard.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.genuitec.eclipse.webclipse.dashboard.editor&quot; name=&quot;Dashboard&quot; partName=&quot;Webclipse Dashboard&quot; title=&quot;Webclipse Dashboard&quot; tooltip=&quot;Dashboard&quot;>&#xD;&#xA;&lt;input factoryID=&quot;com.genuitec.eclipse.webclipse.dashboard.elementFactory&quot; openDashboard=&quot;true&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>com.genuitec.eclipse.webclipse.dashboard.editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_nmV38LcMEeeMHfb4IxM0CQ" elementId="com.genuitec.eclipse.meexplorer.MENavigator" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer+" iconURI="platform:/plugin/com.genuitec.eclipse.projectexplorerplus/icons/webclipse16.png" tooltip="" closeable="true">
@@ -181,8 +190,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Terminal+</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_pZqPsLcMEeeMHfb4IxM0CQ" elementId="com.genuitec.eclipse.webclipse.terminal.ui.TerminalPlusView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -238,7 +245,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_nQeVoLcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_nR0Zd7cMEeeMHfb4IxM0CQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_dSJtHrcMEeeMHfb4IxM0CQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZI97oLgNEeeXL4pZJmsX_A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_dSJtHrcMEeeMHfb4IxM0CQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_nQeVobcMEeeMHfb4IxM0CQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -259,7 +266,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_nQeVpbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_nR0ZgbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_dSJs07cMEeeMHfb4IxM0CQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ZI97qrgNEeeXL4pZJmsX_A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_dSJs07cMEeeMHfb4IxM0CQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_nQeVprcMEeeMHfb4IxM0CQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2295,7 +2302,7 @@
   <addons xmi:id="_dBCtRbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_dEUDoLcMEeeMHfb4IxM0CQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
   <addons xmi:id="_df1iALcMEeeMHfb4IxM0CQ" elementId="com.genuitec.pulse.client.delivery.package.runtime.ui.ide.e42.addonProcessor" contributionURI="bundleclass://com.genuitec.pulse.client.delivery.package.runtime.ui.ide.e42/com.genuitec.pulse.client.deliverypackage.runtime.ui.ide.e42.MenuContributionProcessingAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_SWb34bgNEeeXL4pZJmsX_A" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_dQ9YgLcMEeeMHfb4IxM0CQ" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_dQ9YgbcMEeeMHfb4IxM0CQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>

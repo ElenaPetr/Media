@@ -1,15 +1,24 @@
+  <div *ngIf="photo">
+	<form [formGroup]="mediaForm" novalidate class="update">
+			<div  class="form-group">
+				<label class="center-block">
+					Url:
+					<input [(ngModel)]="photo.url" class="form-control" formControlName="url">
+				</label>
+			</div>
 
-<div  *ngIf="photo" class="update">
-<h2>update media</h2>
-
-<div><label> Url:</label> </div>
-<div><input [(ngModel)]="photo.url" placeholder="url"/></div>
-<div><label for id="description-field"> Description:</label></div> 
-<div><input  [(ngModel)]="photo.description" id="description-field"/></div>
-
-
-<button (click)="goBack()">back</button>
-<button (click)="save()">update</button>
-
-</div>
+				<div class="form-group">
+				<label class="center-block">
+					Description:
+					<input [(ngModel)]="photo.description" class="form-control" formControlName="description"></label>
+				</div>	
+			
+		<button (click)="goBack()">back</button>
+		<button (click)="save()">update</button>
+	</form>
+</div>	
+	<p>Form value: {{ mediaForm.value|json}}</p>
+	<p>Form status: {{ mediaForm.status | json }}</p>
+		
+		
 

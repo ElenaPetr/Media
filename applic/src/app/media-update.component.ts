@@ -2,7 +2,7 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location }                 from '@angular/common';
-
+import { FormsModule, FormGroup, FormBuilder, FormControl, Validators }   from '@angular/forms';
 import { Media }        from './media';
 import { MediaService } from './media.service';
 
@@ -13,13 +13,25 @@ import { MediaService } from './media.service';
 })
 
 export class MediaUpdateComponent implements OnInit {
-  photo: Media;
 
+  photo: Media;
+  mediaForm:FormGroup;
+  
+
+
+  
   constructor(
     private mediaService: MediaService,
     private route: ActivatedRoute,
-    private location: Location
-  ) {}
+    private location: Location,
+    private fb:FormBuilder) {this.createForm();}
+  
+  createForm() {
+    this.mediaForm=this.fb.group({
+      url:['', Validators.required ],
+      description:'',
+    });
+  }
 
   ngOnInit(): void {
    this.route.paramMap

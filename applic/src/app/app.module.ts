@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule,FormGroup,FormControl,FormBuilder}   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 import { AppRoutingModule }     from './app-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -11,11 +11,15 @@ import { UUID } from 'angular2-uuid';
 
 
 import { AppComponent } from './app.component';
-import { MediaComponent} from './media.component';
+import { MediaComponent, } from './media.component';
 import { MediaUpdateComponent }  from './media-update.component';
 import { MediaService }          from './media.service';
 import { NgbdModalComponent} from './modal.component';
 import { NgbdModalContent} from './modal.content';
+import { NgbdTooltipUpdateBasic } from './tooltip-update.component';
+import { NgbdTooltipDeleteBasic } from './tooltip-delete.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { NgbdModalContent} from './modal.content';
     MediaComponent,
 	MediaUpdateComponent,
 	NgbdModalComponent, 
-	NgbdModalContent
+	NgbdModalContent,
+  NgbdTooltipUpdateBasic,
+  NgbdTooltipDeleteBasic 
  	
   ],
   imports: [

@@ -7,7 +7,8 @@ import { Component} from '@angular/core';
       <a routerLink="/media" routerLinkActive="active">Media</a>
     </nav>
     <router-outlet></router-outlet>
-  `
+  `,
+  styleUrls:['./app.component.css']
 })
 export class AppComponent {
 
